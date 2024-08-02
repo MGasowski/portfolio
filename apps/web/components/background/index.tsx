@@ -2,8 +2,22 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-
+type Ball = {
+  id: number;
+  color: string;
+  size: number;
+  xSpeed: number;
+  ySpeed: number;
+  xPos: number;
+  yPos: number;
+  xDirection: number;
+  yDirection: number;
+};
 const generateRandomBalls = (numBalls: number) => {
+  if (typeof window === "undefined") {
+    return []; // Return an empty array when running on the server
+  }
+
   const balls = [];
   for (let i = 0; i < numBalls; i++) {
     balls.push({
@@ -16,15 +30,17 @@ const generateRandomBalls = (numBalls: number) => {
       yPos: Math.random() * window.innerHeight,
       xDirection: Math.random() > 0.5 ? 1 : -1,
       yDirection: Math.random() > 0.5 ? 1 : -1,
-    });
+    } as Ball);
   }
   return balls;
 };
 
 export const BouncingBalls = () => {
-  const [balls, setBalls] = useState(generateRandomBalls(15));
+  const [balls, setBalls] = useState<Ball[]>([]);
 
   useEffect(() => {
+    setBalls(generateRandomBalls(15));
+
     const handleResize = () => setBalls(generateRandomBalls(15));
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
