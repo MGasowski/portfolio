@@ -40,7 +40,7 @@ const TypingEffect = ({ texts, speed, pauseDuration }: TypingEffectProps) => {
       }, pauseDuration);
     }
 
-    return () => clearTimeout(typingRef.current);
+    return () => clearTimeout(typingRef.current as NodeJS.Timeout);
   }, [displayedText, phase, currentIndex, texts, speed, pauseDuration]);
 
   return (
