@@ -4,9 +4,13 @@ import { Reveal } from "../reveal";
 export const Title = ({ text }: { text: string }) => {
   return (
     <Reveal>
-      <div className="flex-row flex mb-8">
-        <h1 className="text-7xl font-bold">{text}</h1>
-        <span className="text-7xl text-primary">.</span>
+      <div className="flex flex-row items-center mb-8">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
+          {text}
+        </h1>
+        <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-primary">
+          .
+        </span>
       </div>
     </Reveal>
   );

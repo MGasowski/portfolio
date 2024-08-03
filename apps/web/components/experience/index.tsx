@@ -35,8 +35,8 @@ const experienceItems = [
 
 export const Experience = () => {
   return (
-    <div className="h-screen flex justify-center items-center ">
-      <div className="flex flex-col w-1/2">
+    <div className="flex justify-center items-center py-16 sm:py-32">
+      <div className="flex flex-col w-full px-4 sm:w-2/3 lg:w-1/2">
         <Title text="Experience" />
         {experienceItems.map((item, index) => (
           <ExperienceItem key={index} {...item} />
@@ -65,23 +65,23 @@ const ExperienceItem = ({
 }: ExperienceItemProps) => {
   return (
     <div className="flex flex-col gap-4 mb-8">
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-col sm:flex-row justify-between">
         <Reveal>
-          <h2 className="text-xl font-bold">{company}</h2>
+          <h2 className="text-lg sm:text-xl font-bold">{company}</h2>
         </Reveal>
-        <p>{date}</p>
+        <p className="text-sm sm:text-base">{date}</p>
       </div>
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-col sm:flex-row justify-between">
         <Reveal>
-          <p className="text-xl text-primary">{title}</p>
+          <p className="text-base sm:text-lg text-primary">{title}</p>
         </Reveal>
-        <p>{location}</p>
+        <p className="text-sm sm:text-base">{location}</p>
       </div>
       <Reveal>
-        <p>{description}</p>
+        <p className="text-sm sm:text-base">{description}</p>
       </Reveal>
       <Reveal>
-        <div className="flex flex-row gap-2">
+        <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
             <Tag key={tag} text={tag} />
           ))}

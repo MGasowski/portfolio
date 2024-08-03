@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Contact = () => {
   return (
-    <div className="flex w-full justify-center h-[700px] pt-64">
+    <div className="flex w-full justify-center h-[700px] pt-64" id="contact">
       <div className="w-2/3 items-center flex flex-col">
         <div className="w-full flex justify-center">
           <Title text="Contact" />
