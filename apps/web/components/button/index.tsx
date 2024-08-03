@@ -9,7 +9,7 @@ export const Button = ({
     <Reveal>
       <div
         onClick={onClick}
-        className="flex space-x-4 border-2 rounded border-primary py-2 px-4 text-primary hover:bg-primary hover:text-black"
+        className="flex space-x-4 border-2 rounded py-2 px-4 bg-primary text-text-dark dark:text-primary dark:hover:bg-primary dark:bg-transparent border-primary  hover:text-black hover:border-background-dark "
       >
         {children}
       </div>

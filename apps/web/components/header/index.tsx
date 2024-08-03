@@ -1,6 +1,9 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { Reveal } from "../reveal";
 import Link from "next/link";
+import { Button } from "../button";
+import { useAtom } from "jotai";
+import themeAtom from "../../state/theme";
 
 export const Header = () => {
   return (
@@ -22,18 +25,36 @@ export const Header = () => {
               </Link>
             </Reveal>
           </div>
-          <Reveal>
+          <div className="flex flex-row items-center gap-4">
+            <ThemeSwitch />
+
             <Link
               href="https://drive.google.com/file/d/1v9M4mc-j0p3E0SPeMJKyOqhH1WxtqQG1/view?usp=sharing"
               target="_blank"
             >
-              <div className="flex space-x-4 border-2 rounded border-primary py-2 px-4 text-primary hover:bg-primary hover:text-black">
-                Resume
-              </div>
+              <Button onClick={() => 0}>Resume</Button>
             </Link>
-          </Reveal>
+          </div>
         </div>
       </div>
     </nav>
+  );
+};
+
+const ThemeSwitch = () => {
+  const [theme, setTheme] = useAtom(themeAtom);
+
+  return theme === "dark" ? (
+    <FaSun
+      size={28}
+      onClick={() => setTheme("light")}
+      className="hover:cursor-pointer"
+    />
+  ) : (
+    <FaMoon
+      size={28}
+      onClick={() => setTheme("dark")}
+      className="hover:cursor-pointer"
+    />
   );
 };

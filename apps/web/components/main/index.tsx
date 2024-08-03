@@ -1,8 +1,7 @@
-import React from "react";
+import Link from "next/link";
+import { Button } from "../button";
 import { Reveal } from "../reveal";
 import TypingEffect from "../typingText";
-import { Button } from "../button";
-import Link from "next/link";
 
 const texts = [
   "build web apps",
@@ -18,7 +17,10 @@ const Main = () => {
           <Reveal>
             <span className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-bold tracking-wide">
               Hi! I&apos;m Marcin
-              <span className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl text-primary">
+              <span
+                className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl text-primary drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]
+"
+              >
                 .
               </span>
             </span>

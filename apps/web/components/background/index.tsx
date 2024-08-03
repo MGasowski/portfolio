@@ -1,7 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useAtom } from "jotai";
 import { useEffect, useState } from "react";
+import themeAtom from "../../state/theme";
 type Ball = {
   id: number;
   color: string;
@@ -84,7 +86,7 @@ export const Background = ({
       className={`relative min-h-screen w-full overflow-y-auto ${className}`}
     >
       <BouncingBalls />
-      <div className="relative z-10 bg-black bg-opacity-30 backdrop-blur-lg min-h-screen">
+      <div className="relative z-10 dark:bg-black bg-white dark:bg-opacity-30 bg-opacity-30 backdrop-blur-lg min-h-screen">
         {children}
       </div>
     </div>

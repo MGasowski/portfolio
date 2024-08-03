@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "userInterfaceStyle": "automatic",
+    "orientation": "default",
+    "web": {
+      "output": "static",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://n"
+        }
+      ]
+    ],
+    "name": "mobile",
+    "slug": "portfolio",
+    "android": {
+      "package": "com.mgasowski.mobile"
+    },
+    "ios": {
+      "bundleIdentifier": "com.mgasowski.mobile"
+    },
+    "extra": {
+      "router": {
+        "origin": "https://n"
+      },
+      "eas": {
+        "projectId": "2be55565-3783-42b2-b604-4c319522b335"
+      }
+    },
+    "owner": "mgasowski"
+  }
+}

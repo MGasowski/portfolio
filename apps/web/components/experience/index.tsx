@@ -73,7 +73,12 @@ const ExperienceItem = ({
       </div>
       <div className="flex flex-col sm:flex-row justify-between">
         <Reveal>
-          <p className="text-base sm:text-lg text-primary">{title}</p>
+          <p
+            className="font-medium dark:font-normal text-base sm:text-lg text-text-dark bg-primary dark:text-primary dark:bg-transparent
+"
+          >
+            {title}
+          </p>
         </Reveal>
         <p className="text-sm sm:text-base">{location}</p>
       </div>

@@ -12,14 +12,18 @@ export const Contact = () => {
         <div className="w-2/3 justify-center text-center">
           Feel free to reach out to me via email at{" "}
           <Link href={"mailto:marcin@digitalgoose.pl"}>
-            <span className="text-primary">marcin@digitalgoose.pl </span>
+            <span className="dark:text-primary text-text-dark bg-primary dark:bg-transparent">
+              marcin@digitalgoose.pl{" "}
+            </span>
           </Link>
           or connect with me on{" "}
           <Link
             href={"https://www.linkedin.com/in/marcin-gasowski"}
             target="_blank"
           >
-            <span className="text-primary">Linkedin</span>
+            <span className="dark:text-primary text-text-dark bg-primary dark:bg-transparent">
+              Linkedin
+            </span>
           </Link>
           . I look forward to connecting with you!
         </div>

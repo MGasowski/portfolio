@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import "../styles/global.css";
 import { Poppins } from "next/font/google";
 const poppins = Poppins({
@@ -12,7 +13,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body
+        className={classNames(
+          poppins.className,
+          "bg-background-light dark:bg-background-dark text-text-dark dark:text-text-light"
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }

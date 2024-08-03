@@ -46,7 +46,9 @@ export const About = () => {
           </div>
           <div className="flex flex-col justify-between lg:w-1/3">
             <div>
-              <span className="text-primary text-lg font-bold">Tech Stack</span>
+              <span className=" text-lg font-bold dark:text-primary bg-primary dark:bg-transparent px-2 py-1">
+                Tech Stack
+              </span>
               <div className="flex flex-wrap gap-2 justify-start mt-4">
                 {techStack.map((tech, index) => (
                   <Tag key={index} text={tech} />
@@ -54,7 +56,9 @@ export const About = () => {
               </div>
             </div>
             <div className="mt-8 lg:mt-0">
-              <span className="text-primary text-lg font-bold">Links</span>
+              <span className=" text-lg font-bold dark:text-primary bg-primary dark:bg-transparent px-2 py-1">
+                Links
+              </span>
               <div className="flex flex-row gap-4 mt-4">
                 <Reveal>
                   <Link href="https://github.com/mgasowski" target="_blank">
